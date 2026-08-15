@@ -4,31 +4,6 @@ Windows-based voice interview agent that joins Google Meet, asks AI-generated
 questions through TTS, transcribes the candidate with Faster Whisper, evaluates
 answers through a local Ollama model, and creates a final text report.
 
-## Project structure
-
-```text
-.
-├── main.py                         # Small CLI entry point
-├── interview_agent/
-│   ├── app.py                      # Interview workflow orchestration
-│   ├── config.py                   # Central environment-based settings
-│   ├── models.py                   # Domain types
-│   ├── reporting.py                # Report output
-│   ├── utils.py                    # Pure parsing helpers
-│   ├── audio/
-│   │   ├── devices.py              # Audio discovery and diagnostics
-│   │   ├── recorder.py             # Candidate recording
-│   │   └── tts.py                  # Edge TTS and SAPI fallback
-│   ├── integrations/
-│   │   ├── google_meet.py          # Playwright Meet session
-│   │   └── ollama.py               # Ollama HTTP client
-│   ├── interview/
-│   │   └── ai_service.py           # Questions, evaluation, final report
-│   └── speech/
-│       └── recognizer.py            # Faster Whisper STT
-└── tests/
-    └── test_utils.py
-```
 
 ## Prerequisites
 
